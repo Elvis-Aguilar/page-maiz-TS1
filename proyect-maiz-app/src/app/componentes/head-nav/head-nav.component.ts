@@ -1,3 +1,4 @@
+import { SesionService } from './../../services/sesion.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeadNavComponent implements OnInit {
 
-  constructor() { }
+  isforo = false
+
+  constructor(private sesion:SesionService) { 
+    this.isforo = this.sesion.isForo
+  }
 
   ngOnInit(): void {
   }

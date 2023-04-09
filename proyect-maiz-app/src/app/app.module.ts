@@ -7,6 +7,8 @@ import { HeadNavComponent } from './componentes/head-nav/head-nav.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { WindowRootComponent } from './componentes/window-root/window-root.component';
 import { CardsComponent } from './componentes/cards/cards.component';
+import { ForoCategComponent } from './componentes/foro-categ/foro-categ.component';
+import { ForoUsoComponent } from './componentes/foro-uso/foro-uso.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { CardsComponent } from './componentes/cards/cards.component';
     HeadNavComponent,
     FooterComponent,
     WindowRootComponent,
-    CardsComponent
+    CardsComponent,
+    ForoCategComponent,
+    ForoUsoComponent
   ],
   imports: [
     BrowserModule,

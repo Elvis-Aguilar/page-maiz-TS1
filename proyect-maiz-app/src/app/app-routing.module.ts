@@ -1,3 +1,4 @@
+import { ForoCategComponent } from './componentes/foro-categ/foro-categ.component';
 import { WindowRootComponent } from './componentes/window-root/window-root.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -6,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: WindowRootComponent,
+  },
+  {
+    path: 'categorias-usos/:id',
+    component: ForoCategComponent,
   },
   {
     path: '**',
