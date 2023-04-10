@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { SesionService } from './../../services/sesion.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,11 +11,17 @@ export class HeadNavComponent implements OnInit {
 
   isforo = false
 
-  constructor(private sesion:SesionService) { 
+  constructor(private sesion:SesionService,
+    private route:Router) { 
     this.isforo = this.sesion.isForo
   }
 
   ngOnInit(): void {
+  }
+
+  regresar(){
+    this.sesion.isForo= false
+    this.route.navigate([''])
   }
 
 }

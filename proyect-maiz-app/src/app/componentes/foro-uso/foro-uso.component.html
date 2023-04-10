@@ -11,18 +11,53 @@
                 <img src={{uso.imagen}} alt="img">
             </p>
             <br>
-            <div>
-                <h1 class="text-center">{{uso.nombre}}</h1>
+            <div *ngFor="let contenido of contenidos let i= index" >
+                <h3 >{{contenido.titulo}}</h3>
                 <p>
-                    {{uso.descripcion}}
+                    {{contenido.contedio}}
                 </p>
                 <br>
                 <p class="text-center">
-                    <img src={{uso.imagen}} alt="img">
+                    <img src={{contenido.imagen}} alt="img">
+                </p>
+                <p>
+                    Fecha-Modificacion: <b>{{contenido.fecha_modificacion}}</b>
                 </p>
                 <br>
-
             </div>
+        </div>
+        <br>
+        <div class="card">
+            <h3>Comentarios Realizados</h3>
+            <div *ngFor="let comet of comentarios let i= index">
+                <p>
+                    <b>Comentario echo por: {{comet.user}}</b>
+                    <br>
+                    <b>"</b> {{comet.contenido}}<b>"</b>
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <h3>Realiza tu comentario</h3>
+            <div class="input-group">
+                <span class="input-group-text">Comentario</span>
+                <textarea class="form-control" aria-label="With textarea" [(ngModel)]='comentario'  
+                placeholder="escribe un comentarios para amplear, discutir, mejorar o compartir sobre el contenido.."></textarea>
+              </div>
+              <div class="row">
+                  <div  class="col-md-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Tú Nombre</span>
+                        <input [(ngModel)]='user' type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+                        placeholder="escribe tu nombre">
+                        <span class="input-group-text">---</span>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <button (click)="saveComentario()"  type="button" class="btn btn-info">comentar</button> 
+                  </div>
+              </div>
         </div>
     </div>
 </section>   

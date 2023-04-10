@@ -41,3 +41,12 @@ CREATE TABLE contenido_uso(
     FOREIGN KEY (id_contendio) REFERENCES contenido(id),
     id INT auto_increment PRIMARY KEY
 );
+
+
+CREATE TABLE comentario(
+    contenido VARCHAR(2500) NOT NULL,
+    id INT auto_increment PRIMARY KEY,
+    user VARCHAR(70) NOT NULL,
+    uso INT NOT NULL,
+    FOREIGN KEY (uso) REFERENCES uso(id)
+);
