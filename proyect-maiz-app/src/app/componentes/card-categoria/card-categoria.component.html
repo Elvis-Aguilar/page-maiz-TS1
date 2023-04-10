@@ -3,7 +3,7 @@
   style="width: 360px; overflow: hidden; border-radius: 1px"
 >
   <img
-    src={{uso.imagen}}
+    src={{categoria.imagen}}
     alt="Man with backpack"
     class="d-block w-full"
   />
@@ -17,11 +17,11 @@
       class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1"
       style="line-height: 1.25"
     >
-     {{uso.nombre}}
+      {{categoria.nombre}}
     </h1>
 
     <p class="mb-1">
-      {{uso.descripcion}} &hellip;
+      {{categoria.descripcion}} &hellip;
     </p>
   </div>
 
@@ -30,6 +30,6 @@
     class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link"
     (click)="goUso()"
     >
-    Read More
+    Ir al Foro
   </a>
 </div>

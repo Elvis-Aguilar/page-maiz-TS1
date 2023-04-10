@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeadNavComponent } from './componentes/head-nav/head-nav.component';
@@ -9,6 +9,7 @@ import { WindowRootComponent } from './componentes/window-root/window-root.compo
 import { CardsComponent } from './componentes/cards/cards.component';
 import { ForoCategComponent } from './componentes/foro-categ/foro-categ.component';
 import { ForoUsoComponent } from './componentes/foro-uso/foro-uso.component';
+import { CardCategoriaComponent } from './componentes/card-categoria/card-categoria.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { ForoUsoComponent } from './componentes/foro-uso/foro-uso.component';
     WindowRootComponent,
     CardsComponent,
     ForoCategComponent,
-    ForoUsoComponent
+    ForoUsoComponent,
+    CardCategoriaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,5 @@
+import { Uso } from './../../../class-models/uso';
+import { SesionService } from './../../services/sesion.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForoUsoComponent implements OnInit {
 
-  constructor() { }
+  uso:Uso = new Uso()
+  constructor(private sesion:SesionService) { }
 
   ngOnInit(): void {
+    this.uso = this.sesion.usoActual
+    
   }
 
 }

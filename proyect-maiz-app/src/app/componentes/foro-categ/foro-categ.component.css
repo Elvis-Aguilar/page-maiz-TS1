@@ -5,3 +5,7 @@ p {
 h2, h3{
     padding: 0px 25px;
 }
+
+img {
+    max-width: 100%;
+  }

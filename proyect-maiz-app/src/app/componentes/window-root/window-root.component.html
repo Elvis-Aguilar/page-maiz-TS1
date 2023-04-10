@@ -79,16 +79,16 @@
               </ol>
         </div>
         <br>
-        <div class="card">
+        <div id="foros" class="card">
             <h2>Categorias para los foros informativos de los usos</h2>
             <p>
                 En estos foros podras  <b> reaccionar y comentar</b> (opinar,discutir) sobre como utilizan 
                 el Maíz en tu pueblo, departamento o municiopio sobre los temas 
                 principales: <b>el uso del maíz en Guatemala</b>
             </p>
-            <div id="foros" class="row">
-                <div class="col-md-6" >
-                    <app-cards></app-cards>  
+            <div class="row">
+                <div *ngFor="let categoria of categoarias let i= index"  class="col-md-6" >
+                    <app-card-categoria></app-card-categoria>  
                 </div>
             </div>
         </div>
