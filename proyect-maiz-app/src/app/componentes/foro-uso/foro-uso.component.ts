@@ -37,7 +37,9 @@ export class ForoUsoComponent implements OnInit {
     );
     this.peticionHttp.getcomentarios(this.uso.id).subscribe(
       (value: Comentario[]) =>{
-        this.comentarios = value
+        if (value.length != 0) {
+          this.comentarios = value
+        }
       },
       (error: any) =>{}
     )

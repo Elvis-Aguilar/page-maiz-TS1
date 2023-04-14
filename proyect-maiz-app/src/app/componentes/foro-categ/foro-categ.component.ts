@@ -25,7 +25,15 @@ export class ForoCategComponent implements OnInit {
       this.route.navigate([''])
     }
     this.categoria=this.sesion.categoriaActual
-    this.usos = this.sesion.usos
+    this.categiraSevi.getUsos(this.categoria.id).subscribe(
+      (created:Uso[]) =>{
+        this.sesion.iteradorUsos=0
+        this.sesion.usos = created
+        this.sesion.isForo= true
+        this.usos = this.sesion.usos
+      },
+      (error: any) =>{}
+    );
   }
 
 

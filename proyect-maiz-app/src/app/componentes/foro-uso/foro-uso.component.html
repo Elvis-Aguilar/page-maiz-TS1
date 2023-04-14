@@ -29,12 +29,14 @@
         <br>
         <div class="card">
             <h3>Comentarios Realizados</h3>
-            <div *ngFor="let comet of comentarios let i= index">
-                <p>
-                    <b>Comentario echo por: {{comet.user}}</b>
-                    <br>
-                    <b>"</b> {{comet.contenido}}<b>"</b>
-                </p>
+            <div *ngIf="comentarios.length!=0" >
+                <div *ngFor="let comet of comentarios let i= index">
+                    <p>
+                        <b>Comentario echo por: {{comet.user}}</b>
+                        <br>
+                        <b>"</b> {{comet.contenido}}<b>"</b>
+                    </p>
+                </div>
             </div>
         </div>
         <br>

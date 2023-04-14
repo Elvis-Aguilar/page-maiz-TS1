@@ -23,17 +23,9 @@ export class CardCategoriaComponent implements OnInit {
   }
   
   public goUso(){
-    this.categiraSevi.getUsos(this.categoria.id).subscribe(
-      (created:Uso[]) =>{
-        this.sesion.iteradorUsos=0
-        this.sesion.usos = created
-        this.sesion.isForo= true
-        this.sesion.categoriaActual=this.categoria
-        this.route.navigate(['categorias-usos',this.categoria.nombre])
-      },
-      (error: any) =>{}
-    );
-    
+    this.sesion.isForo = true
+    this.route.navigate(['categorias-usos',this.categoria.nombre])
+    this.sesion.categoriaActual=this.categoria
   }
 
   
